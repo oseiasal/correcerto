@@ -118,7 +118,7 @@ const ForgotButton = styled.Text`
   opacity: 1;
 `;
 
-export default function () {
+export default function ({ navigation }) {
   return (
     <>
       <Scroll>
@@ -140,7 +140,13 @@ export default function () {
             <PassLabel>Senha</PassLabel>
             <PassInput placeholder="*******" secureTextEntry={true} />
             <ButtonWrap backgroundColor="#0059D4" borderColor="#0059D4">
-              <LoginButtonText>Entrar</LoginButtonText>
+              <LoginButtonText
+                onPress={() => {
+                  navigation.navigate("Dash");
+                }}
+              >
+                Entrar
+              </LoginButtonText>
             </ButtonWrap>
             <ForgotButton>Esqueceu sua senha? Recuperar</ForgotButton>
           </LoginContainer>

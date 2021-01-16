@@ -78,7 +78,7 @@ export default function ({ navigation }) {
             <ButtonWrap backgroundColor="#0059D4" borderColor="#0059D4">
               <Login
                 onPress={() => {
-                  navigation.navigate("Dash");
+                  navigation.navigate("LoginPrincipal");
                 }}
               >
                 Entrar
