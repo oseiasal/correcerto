@@ -2,15 +2,7 @@ import * as React from "react";
 import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Login from "./src/screens/Login";
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
+import { Login, LoginPrincipal } from "./src/screens";
 
 const Stack = createStackNavigator();
 
@@ -23,7 +15,11 @@ function App() {
           component={Login}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="Dash" component={HomeScreen} />
+        <Stack.Screen
+          name="Dash"
+          component={LoginPrincipal}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
