@@ -4,6 +4,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import Home from "./Home";
 import Login from "../Login";
 import Perfil from "./Perfil";
+import TesteVocacional from "./TesteVocacional";
 
 const Drawer = createDrawerNavigator();
 
@@ -21,7 +22,7 @@ export default function () {
       <Drawer.Screen name="Desafios" component={Home} />
       <Drawer.Screen name="Curriculo" component={Home} />
       <Drawer.Screen name="Seus Projetos" component={Home} />
-      <Drawer.Screen name="Teste Vocacional" component={Home} />
+      <Drawer.Screen name="Teste Vocacional" component={TesteVocacional} />
       <Drawer.Screen name="Perfil" component={Perfil} />
       <Drawer.Screen name="Sair" component={Login} />
     </Drawer.Navigator>
