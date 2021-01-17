@@ -99,7 +99,13 @@ export default function ({ navigation }) {
       </Description>
 
       <ButtonWrap>
-        <Next>Avançar</Next>
+        <Next
+          onPress={() => {
+            navigation.navigate("Form1");
+          }}
+        >
+          Avançar
+        </Next>
       </ButtonWrap>
     </Scroll>
   );

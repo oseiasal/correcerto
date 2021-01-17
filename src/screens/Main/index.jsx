@@ -23,6 +23,7 @@ export default function () {
       <Drawer.Screen name="Curriculo" component={Home} />
       <Drawer.Screen name="Seus Projetos" component={Home} />
       <Drawer.Screen name="Teste Vocacional" component={TesteVocacional} />
+      <Drawer.Screen name="Noticias" component={TesteVocacional} />
       <Drawer.Screen name="Perfil" component={Perfil} />
       <Drawer.Screen name="Sair" component={Login} />
     </Drawer.Navigator>
