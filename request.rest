@@ -1,1 +1,4 @@
 GET http://simpleware.ddns.net:1880/nome
+
+###
+GET http://127.0.0.1:1880/users
