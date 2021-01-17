@@ -276,6 +276,43 @@ export default function () {
               <GraphImage source={require("../../../assets/graph.png")} />
             </GraphRow>
           </UserInfoView>
+
+          <LastDesafios>
+            <Last>Seu currículo</Last>
+            <SeeMore>Veja mais</SeeMore>
+          </LastDesafios>
+
+          <UserInfoView>
+            <UserRow>
+              <UserTextCel>
+                <UserTextSubTitle>Experiência</UserTextSubTitle>
+                <UserInfoTitle>Não Possui</UserInfoTitle>
+              </UserTextCel>
+              <UserCelRight>
+                <AntDesign name="right" size={24} color="#8A8A8A" />
+              </UserCelRight>
+            </UserRow>
+            <UserRow>
+              <UserTextCel>
+                <UserTextSubTitle>Escolaridade</UserTextSubTitle>
+                <UserInfoTitle>
+                  Ensino Médio - E.E. Moacyr Fernandes
+                </UserInfoTitle>
+              </UserTextCel>
+              <UserCelRight>
+                <AntDesign name="right" size={24} color="#8A8A8A" />
+              </UserCelRight>
+            </UserRow>
+            <UserRow>
+              <UserTextCel>
+                <UserTextSubTitle>Cursos Complementares</UserTextSubTitle>
+                <UserInfoTitle>7 cadastrados</UserInfoTitle>
+              </UserTextCel>
+              <UserCelRight>
+                <AntDesign name="right" size={24} color="#8A8A8A" />
+              </UserCelRight>
+            </UserRow>
+          </UserInfoView>
         </InformationView>
       </Scroll>
     </>
