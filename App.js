@@ -1,8 +1,8 @@
 import * as React from "react";
-import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Login, LoginPrincipal, Dashboard } from "./src/screens";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import { Login, LoginPrincipal, Main } from "./src/screens";
 
 const Stack = createStackNavigator();
 
@@ -22,7 +22,7 @@ function App() {
         />
         <Stack.Screen
           name="Dash"
-          component={Dashboard}
+          component={Main}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

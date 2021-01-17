@@ -8,9 +8,7 @@ import {
   Entypo,
   EvilIcons,
 } from "@expo/vector-icons";
-import ImageElipse from "../../assets/elipse.png";
-
-import { useFonts } from "expo-font";
+import ImageElipse from "../../../assets/elipse.png";
 
 const Scroll = styled.ScrollView``;
 
@@ -227,7 +225,7 @@ export default function () {
       <Scroll>
         <Elipse source={ImageElipse} />
         <HeaderContainer>
-          <AntDesign name="bars" size={30} color="black" />
+          <AntDesign name="bars" size={30} color="black" onPress={() => {}} />
           <RightView>
             <MaterialCommunityIcons
               name="bell-outline"
