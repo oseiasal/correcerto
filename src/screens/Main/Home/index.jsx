@@ -207,13 +207,17 @@ const Dias = styled.Text`
   color: #8a8a8a;
 `;
 
-export default function () {
+export default function ({ navigation }) {
   return (
     <>
       <Scroll>
         <Elipse source={ImageElipse} />
 
-        <Header />
+        <Header
+          openDrawer={() => {
+            navigation.openDrawer();
+          }}
+        />
         <SearchArea>
           <SearchTitle>Procurar por corre</SearchTitle>
           <SearchTool>

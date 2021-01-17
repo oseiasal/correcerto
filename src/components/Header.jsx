@@ -21,10 +21,17 @@ const HeaderContainer = styled.View`
   justify-content: space-between;
 `;
 
-export default function Header() {
+export default function Header({ openDrawer }) {
   return (
     <HeaderContainer>
-      <AntDesign name="bars" size={30} color="white" onPress={() => {}} />
+      <AntDesign
+        name="bars"
+        size={30}
+        color="white"
+        onPress={() => {
+          openDrawer();
+        }}
+      />
       <RightView>
         <MaterialCommunityIcons name="bell-outline" size={30} color="white" />
         <FontAwesome5 name="user" size={30} color="white" />
