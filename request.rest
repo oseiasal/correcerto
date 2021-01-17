@@ -1,4 +1,9 @@
-GET http://simpleware.ddns.net:1880/nome
-
+GET http://simpleware.ddns.net:1880/nome 
 ###
-GET http://127.0.0.1:1880/users
+GET http://simpleware.ddns.net:1880/usuario 
+###
+GET http://simpleware.ddns.net:1880/curriculo 
+###
+GET http://simpleware.ddns.net:1880/escolaridade 
+###
+GET http://simpleware.ddns.net:1880/desafio
