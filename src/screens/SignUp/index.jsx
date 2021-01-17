@@ -75,11 +75,15 @@ const Next = styled.Text`
   font-size: 18px;
 `;
 
-export default function () {
+export default function ({ navigation }) {
   return (
     <Scroll>
       <Menu>
-        <Voltar>
+        <Voltar
+          onPress={() => {
+            navigation.navigate("Login");
+          }}
+        >
           <FontAwesome name="long-arrow-left" size={24} color="black" />
         </Voltar>
         <Avancar>Avançar</Avancar>
