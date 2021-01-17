@@ -73,7 +73,14 @@ export default function ({ navigation }) {
           </LoremText>
           <ButtonContainer>
             <ButtonWrap backgroundColor="white" borderColor="black">
-              <SignUpButton> Cadastrar</SignUpButton>
+              <SignUpButton
+                onPress={() => {
+                  navigation.navigate("SignUp");
+                }}
+              >
+                {" "}
+                Cadastrar
+              </SignUpButton>
             </ButtonWrap>
             <ButtonWrap backgroundColor="#0059D4" borderColor="#0059D4">
               <Login

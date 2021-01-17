@@ -2,7 +2,7 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { Login, LoginPrincipal, Main } from "./src/screens";
+import { Login, LoginPrincipal, Main, SignUp } from "./src/screens";
 
 const Stack = createStackNavigator();
 
@@ -23,6 +23,11 @@ function App() {
         <Stack.Screen
           name="Dash"
           component={Main}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SignUp"
+          component={SignUp}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

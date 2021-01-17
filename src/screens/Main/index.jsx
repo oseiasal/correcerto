@@ -18,7 +18,7 @@ export default function () {
           "white" /* Font color for inactive screens' labels */,
       }}
     >
-      <Drawer.Screen name="Home" component={Home} />
+      <Drawer.Screen name="Inicio" component={Home} />
       <Drawer.Screen name="Desafios" component={Home} />
       <Drawer.Screen name="Curriculo" component={Home} />
       <Drawer.Screen name="Seus Projetos" component={Home} />
