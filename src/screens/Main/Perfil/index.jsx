@@ -178,7 +178,7 @@ const GraphImage = styled.Image`
   width: 150px;
 `;
 
-export default function ({ openDrawer }) {
+export default function ({ navigation }) {
   const name = "Pedro Almeida Nogueira";
   return (
     <>
