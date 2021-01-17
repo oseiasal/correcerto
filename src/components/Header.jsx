@@ -19,6 +19,7 @@ const HeaderContainer = styled.View`
   padding: 20px;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 `;
 
 export default function Header({ openDrawer }) {
