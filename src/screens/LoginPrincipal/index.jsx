@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import bgImage from "../../assets/bg2.jpeg";
 
@@ -108,6 +108,8 @@ background-color: ${(props) => props.backgroundColor};
 
 const LoginButtonText = styled.Text`
   color: white;
+  width: 100%;
+  text-align: center;
 `;
 
 const ForgotButton = styled.Text`
@@ -116,7 +118,13 @@ const ForgotButton = styled.Text`
   opacity: 1;
 `;
 
+const LoginMessage = styled.Text`
+  align-self: center;
+  margin: 5px;
+`;
+
 export default function ({ navigation }) {
+  const [loginMessage, setloginMessage] = useState("");
   return (
     <>
       <Scroll>
@@ -137,9 +145,11 @@ export default function ({ navigation }) {
             <EmailInput placeholder="Digite seu e-mail aqui..." />
             <PassLabel>Senha</PassLabel>
             <PassInput placeholder="*******" secureTextEntry={true} />
+            <LoginMessage>{loginMessage}</LoginMessage>
             <ButtonWrap backgroundColor="#0059D4" borderColor="#0059D4">
               <LoginButtonText
                 onPress={() => {
+                  setloginMessage("Entrando...");
                   navigation.navigate("Dash");
                 }}
               >
