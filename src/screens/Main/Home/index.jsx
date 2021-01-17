@@ -9,21 +9,9 @@ import {
   EvilIcons,
 } from "@expo/vector-icons";
 import ImageElipse from "../../../assets/elipse.png";
+import Header from "../../../components/Header";
 
 const Scroll = styled.ScrollView``;
-
-const HeaderContainer = styled.View`
-  margin-top: 10px;
-  padding: 20px;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const RightView = styled.View`
-  width: 80px;
-  justify-content: space-between;
-  flex-direction: row;
-`;
 
 const SearchArea = styled.View``;
 const SearchTitle = styled.Text`
@@ -224,17 +212,8 @@ export default function () {
     <>
       <Scroll>
         <Elipse source={ImageElipse} />
-        <HeaderContainer>
-          <AntDesign name="bars" size={30} color="black" onPress={() => {}} />
-          <RightView>
-            <MaterialCommunityIcons
-              name="bell-outline"
-              size={30}
-              color="black"
-            />
-            <FontAwesome5 name="user" size={30} color="black" />
-          </RightView>
-        </HeaderContainer>
+
+        <Header />
         <SearchArea>
           <SearchTitle>Procurar por corre</SearchTitle>
           <SearchTool>
