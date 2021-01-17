@@ -8,6 +8,7 @@ import {
   Entypo,
   EvilIcons,
 } from "@expo/vector-icons";
+
 const RightView = styled.View`
   width: 80px;
   justify-content: space-between;
@@ -20,6 +21,11 @@ const HeaderContainer = styled.View`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+`;
+
+const AvatarToolvar = styled.Image`
+  height: 35px;
+  width: 35px;
 `;
 
 export default function Header({ openDrawer }) {
@@ -35,7 +41,7 @@ export default function Header({ openDrawer }) {
       />
       <RightView>
         <MaterialCommunityIcons name="bell-outline" size={30} color="white" />
-        <FontAwesome5 name="user" size={30} color="white" />
+        <AvatarToolvar source={require("../assets/avatar_toolbar.png")} />
       </RightView>
     </HeaderContainer>
   );

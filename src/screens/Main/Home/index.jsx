@@ -36,9 +36,8 @@ const SearchView = styled.View`
   width: 306px;
   height: 42px;
 
-  background: #ffffff;
+  background: #ffffff99;
   border-radius: 4px;
-  opacity: 0.5;
   padding-left: 5px;
 `;
 const Search = styled.TextInput`
@@ -56,9 +55,8 @@ const ToolView = styled.View`
   align-items: center;
   margin-left: 24px;
 
-  background: #ffffff;
+  background: #ffffff88;
   border-radius: 4px;
-  opacity: 0.3;
 `;
 
 const Row = styled.View`
@@ -102,6 +100,14 @@ const IconCel = styled.View`
   width: 54px;
   height: 54px;
 `;
+
+const IconCelCircle = styled.View`
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 74px;
+`;
+
 const ProjectWrapper = styled.View`
   padding: 10px;
   opacity: 0.9;
@@ -132,9 +138,8 @@ const LastTime = styled.Text``;
 const ProjectStatus = styled.Text`
   margin-right: 24px;
 
-  background: #0059d4;
+  background: #0059d455;
   border-radius: 20px;
-  opacity: 0.55;
   color: blue;
   padding: 5px;
 `;
@@ -168,7 +173,8 @@ const SeeMore = styled.Text`
 
 const LateralScrollView = styled.ScrollView`
   height: 150px;
-  margin: 10px;
+  margin-left: 24px;
+  margin-right: 24px;
   padding: 5px;
 `;
 const Card = styled.View`
@@ -207,6 +213,35 @@ const Dias = styled.Text`
   color: #8a8a8a;
 `;
 
+const CircleLogo = styled.Image`
+  width: 48px;
+  height: 48px;
+`;
+
+const CategoryWrapper = styled.View`
+  flex-direction: row;
+  flex-wrap: wrap
+  margin: 20px;
+
+  justify-content: center;
+`;
+const CategoryCard = styled.View`
+  background: ${(props) => props.bgColor};
+  width: 174px;
+  height: 110px;
+  border-radius: 4px;
+
+  padding: 10px;
+
+  margin: 5px;
+`;
+
+const CategoryTitle = styled.Text`
+  color: #ffffff;
+  font-size: 14px;
+  margin-left: 3px;
+`;
+
 export default function ({ navigation }) {
   return (
     <>
@@ -222,11 +257,11 @@ export default function ({ navigation }) {
           <SearchTitle>Procurar por corre</SearchTitle>
           <SearchTool>
             <SearchView>
-              <AntDesign name="search1" size={24} color="black" />
+              <AntDesign name="search1" size={24} color="white" />
               <Search placeholder="Procure por um desafio" />
             </SearchView>
             <ToolView>
-              <FontAwesome5 name="tools" size={24} color="black" />
+              <FontAwesome5 name="tools" size={24} color="white" />
             </ToolView>
           </SearchTool>
         </SearchArea>
@@ -236,9 +271,9 @@ export default function ({ navigation }) {
         </Row>
         <ProjectContainer>
           <RowProject>
-            <IconCel>
-              <Entypo name="circle" size={24} color="black" />
-            </IconCel>
+            <IconCelCircle>
+              <CircleLogo source={require("../../../assets/circle_logo.png")} />
+            </IconCelCircle>
             <ProjectWrapper>
               <ProjectTitle>Titulo do Projeto</ProjectTitle>
               <JobTitle>Instituto CCR - Vila Olímpia</JobTitle>
@@ -274,7 +309,11 @@ export default function ({ navigation }) {
         <LateralScrollView horizontal={true}>
           <Card>
             <WhiteCircle>
-              <Entypo name="circle" size={24} color="black" />
+              <IconCelCircle>
+                <CircleLogo
+                  source={require("../../../assets/circle_logo.png")}
+                />
+              </IconCelCircle>
             </WhiteCircle>
             <InfoCardNew>
               <TextTema>Políticas Públicas</TextTema>
@@ -286,7 +325,11 @@ export default function ({ navigation }) {
           </Card>
           <Card>
             <WhiteCircle>
-              <Entypo name="circle" size={24} color="black" />
+              <IconCelCircle>
+                <CircleLogo
+                  source={require("../../../assets/circle_logo.png")}
+                />
+              </IconCelCircle>
             </WhiteCircle>
             <InfoCardNew>
               <TextTema>Políticas Públicas</TextTema>
@@ -297,6 +340,30 @@ export default function ({ navigation }) {
             </InfoCardNew>
           </Card>
         </LateralScrollView>
+
+        <LastDesafios>
+          <Last>Principais categorias</Last>
+          <SeeMore> </SeeMore>
+        </LastDesafios>
+
+        <CategoryWrapper>
+          <CategoryCard bgColor="#0059D4">
+            <CircleLogo source={require("../../../assets/circle_logo.png")} />
+            <CategoryTitle>Categoria</CategoryTitle>
+          </CategoryCard>
+          <CategoryCard bgColor="#08B4E1">
+            <CircleLogo source={require("../../../assets/circle_logo.png")} />
+            <CategoryTitle>Categoria</CategoryTitle>
+          </CategoryCard>
+          <CategoryCard bgColor="#05DE85">
+            <CircleLogo source={require("../../../assets/circle_logo.png")} />
+            <CategoryTitle>Categoria</CategoryTitle>
+          </CategoryCard>
+          <CategoryCard bgColor="#94CE09">
+            <CircleLogo source={require("../../../assets/circle_logo.png")} />
+            <CategoryTitle>Categoria</CategoryTitle>
+          </CategoryCard>
+        </CategoryWrapper>
       </Scroll>
     </>
   );
