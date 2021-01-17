@@ -26,7 +26,7 @@ position: relative;
 const Title = styled.Text`
   top: 20px;
   text-align: left;
-  font: normal bold 24px barlow;
+  font-size: 24px;
   padding: 10px 30px;
   letter-spacing: 0px;
   color: #0059d4;

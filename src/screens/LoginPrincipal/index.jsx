@@ -29,7 +29,7 @@ const WelcomeContainer = styled.View`
 `;
 const Title = styled.Text`
   text-align: left;
-  font: normal bold 24px Barlow;
+  font-size: 24px;
   letter-spacing: 0px;
   color: #ffab2c;
   opacity: 1;
@@ -56,9 +56,8 @@ const LoginContainer = styled.View`
 const LoginText = styled.Text`
   margin-top: 20px;
   margin-left: 24px;
-  height: 17px;
   text-align: left;
-  font: normal normal bold 14px/18px Barlow;
+  font-size: 15px;
   letter-spacing: 0px;
   color: #0e304d;
   opacity: 1;
@@ -67,9 +66,8 @@ const LoginText = styled.Text`
 const PassLabel = styled.Text`
   margin-top: 20px;
   margin-left: 24px;
-  height: 17px;
   text-align: left;
-  font: normal normal bold 14px/18px Barlow;
+  font-size: 15px;
   letter-spacing: 0px;
   color: #0e304d;
   opacity: 1;
